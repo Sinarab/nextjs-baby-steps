@@ -5,11 +5,13 @@ import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
+  ArrowLeftIcon,
 } from "@heroicons/react/24/outline";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Button } from "./button";
 import { useActionState } from "react";
 import { authenticate } from "@/app/lib/actions";
+import Link from "next/link";
 
 export default function LoginForm() {
   const [errorMessage, formAction, isPending] = useActionState(
@@ -37,7 +39,7 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Enter your email address"
+                placeholder="Enter your email address(user@nextmail.com)"
                 required
               />
               <AtSymbolIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
@@ -56,7 +58,7 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
-                placeholder="Enter password"
+                placeholder="Enter password (123456)"
                 required
                 minLength={6}
               />
@@ -67,6 +69,12 @@ export default function LoginForm() {
         <Button className="mt-4 w-full" aria-disabled={isPending}>
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
+        <Link
+          href="/"
+          className="mt-4 flex items-center justify-between rounded-lg bg-gray-300 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-gray-200 md:text-base"
+        >
+          Back to main <ArrowLeftIcon className="w-5 md:w-5" />
+        </Link>
         <div className="flex h-8 items-end space-x-1">
           {errorMessage && (
             <>

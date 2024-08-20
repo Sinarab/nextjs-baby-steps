@@ -17,8 +17,8 @@ Road map 📍🗺️
 | 11. Search and pagination       | ✅     |
 | 12. Mutating data               | ✅     |
 | 13. Handling errors             | ✅     |
-| 14. Improving accessibility     | ❌     |
-| 15. Adding authentication       | ❌     |
-| 16. Adding metadata             | ❌     |
+| 14. Improving accessibility     | ✅     |
+| 15. Adding authentication       | ✅     |
+| 16. Adding metadata             | ✅     |
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
